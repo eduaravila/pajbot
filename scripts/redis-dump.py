@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 import sys
-
+import os
 import redis
 
 # adjust here if you have specific redis options!
-r = redis.Redis()
+REDIS_HOST = os.environ.get('REDIS_HOST', 'redis')
+REDIS_PORT = 6379
+
+r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT)
 
 KEY_TEMPLATES = [
     "emotes:count",
