@@ -4,7 +4,7 @@ import sys
 import redis
 
 # adjust here if you have specific redis options!
-r = redis.Redis()
+r = redis.Redis(host='redis')
 
 KEY_TEMPLATES = [
     "emotes:count",
