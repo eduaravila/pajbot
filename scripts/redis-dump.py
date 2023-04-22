@@ -4,9 +4,9 @@ import os
 import redis
 
 # adjust here if you have specific redis options!
+
 REDIS_HOST = os.environ.get('REDIS_HOST', 'redis')
 REDIS_PORT = 6379
-
 r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT)
 
 KEY_TEMPLATES = [
